@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_extra %}
+  <script src="{% static 'js/htmx_ext_ws.js' %}"></script>
+{% endblock head_extra %}
+
+{% block content %}
+  <main>
+    {% include "chat/partials/chat_messages_container.html" %}
+    {% include "chat/partials/chat_messages_form.html" %}
+  </main>
+{% endblock content %}

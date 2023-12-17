@@ -1,0 +1,10 @@
+<div
+  id="chat-messages-container"
+  hx-ext="ws"
+  ws-connect="/ws/chatroom"
+  hx-swap-oob="beforeend"
+>
+  {% for msg in messages %}
+    <div role="alert">{{ msg.text }}</div>
+  {% endfor %}
+</div>

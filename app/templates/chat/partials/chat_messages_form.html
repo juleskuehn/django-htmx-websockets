@@ -1,0 +1,21 @@
+<form
+  id="chat-form"
+  hx-post="{% url 'chat:chat-ajax' %}"
+  hx-on::after-request="this.text.value = ''"
+  hx-swap="outerHTML"
+>
+  <div>
+    <input
+      type="text"
+      id="text"
+      name="text"
+      rows="1"
+      placeholder="Your message..."
+      autocomplete="off"
+      required
+    ></input>
+    <button type="submit">
+      Send
+    </button>
+  </div>
+</form>
